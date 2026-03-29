@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eva Crypto</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+
+<img src="eva-crypto-logo.png" class="logo">
+
+<h1>Eva Crypto</h1>
+
+<p>Secure Crypto Payment & Investment Plans</p>
+
+<a href="https://t.me/EV_E4" class="telegram-btn">
+Contact Telegram
+</a>
+
+</header>
+
+<section class="wallets">
+
+<h2>Crypto Wallets</h2>
+
+<div class="wallet">
+
+<h3>USDT TRC20</h3>
+
+<p id="trc20">
+TDeZghustWvrrayEX9Xo29NnJvw54inB3B
+</p>
+
+<button onclick="copyWallet('trc20')">
+Copy Wallet
+</button>
+
+</div>
+
+<div class="wallet">
+
+<h3>USDT BEP20</h3>
+
+<p id="bep20">
+0x2780fbafa1838228a8a0b25ba8cff0fce29ba12c
+</p>
+
+<button onclick="copyWallet('bep20')">
+Copy Wallet
+</button>
+
+</div>
+
+<div class="wallet">
+
+<h3>USDT ERC20</h3>
+
+<p id="erc20">
+0x2780fbafa1838228a8a0b25ba8cff0fce29ba12c
+</p>
+
+<button onclick="copyWallet('erc20')">
+Copy Wallet
+</button>
+
+</div>
+
+</section>
+
+<section class="plans">
+
+<h2>Payment Plans</h2>
+
+<div class="plan">
+<h3>Starter</h3>
+<p class="price">$200</p>
+<a href="https://t.me/EV_E4">Pay Now</a>
+</div>
+
+<div class="plan">
+<h3>Basic</h3>
+<p class="price">$400</p>
+<a href="https://t.me/EV_E4">Pay Now</a>
+</div>
+
+<div class="plan">
+<h3>Pro</h3>
+<p class="price">$600</p>
+<a href="https://t.me/EV_E4">Pay Now</a>
+</div>
+
+<div class="plan">
+<h3>VIP</h3>
+<p class="price">$800</p>
+<a href="https://t.me/EV_E4">Pay Now</a>
+</div>
+
+</section>
+
+<footer>
+
+<p>Telegram: @EV_E4</p>
+<p>© 2026 Eva Crypto</p>
+
+</footer>
+
+<script>
+
+function copyWallet(id) {
+
+let text = document.getElementById(id).innerText
+
+navigator.clipboard.writeText(text)
+
+alert("Wallet copied successfully")
+
+}
+
+</script>
+
+</body>
+</html>
