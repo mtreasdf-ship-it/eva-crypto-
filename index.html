@@ -1,36 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Eva Crypto</title>
 
 <link rel="stylesheet" href="style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;500;700&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
-<header>
+<div class="bg"></div>
 
-<img src="eva-crypto-logo.png" class="logo">
+<header>
 
 <h1>Eva Crypto</h1>
 
-<p>Secure Crypto Payment & Investment Plans</p>
+<p>منصة استثمار العملات الرقمية</p>
+
+<p class="since">منذ 2019</p>
 
 <a href="https://t.me/EV_E4" class="telegram-btn">
-Contact Telegram
+تواصل عبر التليجرام
 </a>
 
 </header>
 
 <section class="wallets">
 
-<h2>Crypto Wallets</h2>
+<h2>المحافظ الإلكترونية</h2>
 
 <div class="wallet">
 
@@ -41,7 +44,7 @@ TDeZghustWvrrayEX9Xo29NnJvw54inB3B
 </p>
 
 <button onclick="copyWallet('trc20')">
-Copy Wallet
+نسخ المحفظة
 </button>
 
 </div>
@@ -55,7 +58,7 @@ Copy Wallet
 </p>
 
 <button onclick="copyWallet('bep20')">
-Copy Wallet
+نسخ المحفظة
 </button>
 
 </div>
@@ -69,7 +72,7 @@ Copy Wallet
 </p>
 
 <button onclick="copyWallet('erc20')">
-Copy Wallet
+نسخ المحفظة
 </button>
 
 </div>
@@ -78,50 +81,94 @@ Copy Wallet
 
 <section class="plans">
 
-<h2>Payment Plans</h2>
+<h2>خطط الاستثمار</h2>
 
 <div class="plan">
-<h3>Starter</h3>
-<p class="price">$200</p>
-<a href="https://t.me/EV_E4">Pay Now</a>
+<h3>خطة البداية</h3>
+<p class="price">200$</p>
+<p>ربح 30% أسبوعي</p>
+<p>0% مخاطر</p>
+<a href="https://t.me/EV_E4">استثمر الآن</a>
 </div>
 
 <div class="plan">
-<h3>Basic</h3>
-<p class="price">$400</p>
-<a href="https://t.me/EV_E4">Pay Now</a>
+<h3>الخطة الأساسية</h3>
+<p class="price">400$</p>
+<p>ربح 30% أسبوعي</p>
+<p>0% مخاطر</p>
+<a href="https://t.me/EV_E4">استثمر الآن</a>
 </div>
 
 <div class="plan">
-<h3>Pro</h3>
-<p class="price">$600</p>
-<a href="https://t.me/EV_E4">Pay Now</a>
+<h3>خطة برو</h3>
+<p class="price">600$</p>
+<p>ربح 30% أسبوعي</p>
+<p>0% مخاطر</p>
+<a href="https://t.me/EV_E4">استثمر الآن</a>
 </div>
 
-<div class="plan">
-<h3>VIP</h3>
-<p class="price">$800</p>
-<a href="https://t.me/EV_E4">Pay Now</a>
+<div class="plan vip">
+<h3>خطة VIP</h3>
+<p class="price">800$</p>
+<p>ربح 30% أسبوعي</p>
+<p>0% مخاطر</p>
+<a href="https://t.me/EV_E4">استثمر الآن</a>
 </div>
+
+</section>
+
+<section class="reviews">
+
+<h2>⭐ 937 عميل سعيد</h2>
+
+<div id="reviews-container"></div>
 
 </section>
 
 <footer>
 
+<p>Eva Crypto</p>
 <p>Telegram: @EV_E4</p>
-<p>© 2026 Eva Crypto</p>
+<p>Since 2019</p>
 
 </footer>
 
 <script>
 
-function copyWallet(id) {
+function copyWallet(id){
 
-let text = document.getElementById(id).innerText
-
+let text=document.getElementById(id).innerText
 navigator.clipboard.writeText(text)
 
-alert("Wallet copied successfully")
+alert("تم نسخ المحفظة")
+
+}
+
+let reviews=[
+
+"خدمة ممتازة وسريعة",
+"منصة موثوقة جدًا",
+"أفضل موقع استثمار",
+"التعامل احترافي",
+"الدفع سريع",
+"أرباح ممتازة",
+"خدمة رائعة",
+"آمن وسهل",
+"ثقة عالية",
+"تجربة ممتازة"
+
+]
+
+let container=document.getElementById("reviews-container")
+
+for(let i=0;i<937;i++){
+
+let div=document.createElement("div")
+div.className="review"
+
+div.innerHTML="⭐⭐⭐⭐⭐<p>"+reviews[i%10]+"</p>"
+
+container.appendChild(div)
 
 }
 
